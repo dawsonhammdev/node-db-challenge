@@ -6,6 +6,8 @@ exports.up = function(knex) {
         tbl.string('name', 120)
         .notNullable();
         tbl.string('description', 120);
+        tbl.boolean('completed')
+        .defaultTo(false);
     })
     .createTable('resources', tbl => {
         tbl.increments(); // unique ID
@@ -18,6 +20,8 @@ exports.up = function(knex) {
         tbl.string('description', 120)
         .notNullable();
         tbl.string('notes', 220);
+        tbl.boolean('completed')
+        .defaultTo(false);
     })
     .createTable('projects_resources', tbl => {
         tbl.increments(); // unique ID
