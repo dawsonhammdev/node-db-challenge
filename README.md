@@ -38,19 +38,19 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
+- [x] Explain the difference between `Relational Databases` and `SQL`.
 
 This is kind of a weird question because SQL DB's are referred to as (RDBMS) but the difference btween a noSQL and SQL database is the langues and the structure and scalability, but they all have their place in the world of DB's!
 
-- [ ] Why do tables need a `primary key`?
+- [x] Why do tables need a `primary key`?
 
 Tables need a key to track the items in a DB table.  Without an id that incremenets and is unique there would be no way to reffernece these data points when trying to make andpoint calls or join tables.
 
-- [ ] What is the name given to a table column that references the primary key on another table.
+- [x] What is the name given to a table column that references the primary key on another table.
 
 foriegn key.
 
-- [ ] What do we need in order to have a _many to many_ relationship between two tables.
+- [x] What do we need in order to have a _many to many_ relationship between two tables.
 
 a connection table that has foreign keys connecting the tables.
 

@@ -1,29 +1,27 @@
 const express = require('express');
 
-const Project = require('./project-model.js');
+const Resources = require('./project-model.js');
 
 const router = express.Router();
 
-//GET ALL PROJECTS
-
 router.get('/', (req,res) => {
-    Project.getAllProjects()
-    .then(projects => {
-        res.status(200).json(projects);
+    Resources.getResources()
+    .then(resource => {
+        res.status(200).json(resource);
     })
     .catch(err => {
         res.status(500).json({
-            errMessage: 'Sorry, an error has occured with retrieving projects'
+            errMessage: 'Sorry, an error has occured with retrieving resources'
         })
     })
 })
 
 router.post('/', (req,res) => {
-    const projectData = req.body;
+    const resourceData = req.body;
 
-    Project.addProject(projectData)
-    .then(pro => {
-        res.status(201).json(pro);
+    Resources.addResource(resourceData)
+    .then(resource => {
+        res.status(201).json(resource);
     })
     .catch(err => {
         res.status(500).json({
@@ -31,6 +29,5 @@ router.post('/', (req,res) => {
         })
     })
 })
-
 
 module.exports = router
